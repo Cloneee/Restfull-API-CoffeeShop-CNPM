@@ -207,7 +207,7 @@ router.get("/customer/:customerId", async function (req, res) {
 });
 
 router.post("/toggle", (req,res)=>{
-	Order.findByIdAndUpdate(req.body.id, {status: req.body.status})
+	Order.findByIdAndUpdate(req.body._id, {status: req.body.status})
 			.then(()=>res.json({msg: "Update status success", status: req.body.status}))
 			.catch(err=>res.status(500).json({err: err.message}))
 })
