@@ -101,13 +101,9 @@ router
 			{
 				name: req.body.name,
 				description: req.body.description,
-				image: req.body.image[0],
-				images: req.body.images,
 				price: req.body.price,
 				category: req.body.category,
-				rating: req.body.rating,
 				isFeatured: req.body.isFeatured,
-				dateCreated: req.body.dateCreated,
 			},
 			{ new: true },
 			function (err) {
