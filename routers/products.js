@@ -93,7 +93,7 @@ router
 					message: "The Product with the given ID was not found",
 				});
 			}
-		).populate("category");
+		);
 	})
 	.put(function (req, res) {
 		Product.findOneAndUpdate(
@@ -101,7 +101,7 @@ router
 			{
 				name: req.body.name,
 				description: req.body.description,
-				image: req.body.image,
+				image: req.body.image[0],
 				images: req.body.images,
 				price: req.body.price,
 				category: req.body.category,
