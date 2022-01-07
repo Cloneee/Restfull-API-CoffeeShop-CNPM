@@ -181,11 +181,7 @@ router.get("/customer/:customerId", async function (req, res) {
 				path: "orderItems",
 				populate: {
 					path: "product",
-					populate: {
-						path: "category",
-						select: "name"
-					},
-					select: "_id name price"
+					select: "_id name price category"
 				},
 				select: "-__v"
 			})

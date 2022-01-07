@@ -35,7 +35,7 @@ router
 					let newProduct = new Product({
 						name: req.body.name,
 						description: req.body.description,
-						image: req.body.image,
+						image: req.body.images[0],
 						images: req.body.images,
 						price: req.body.price,
 						category: req.body.category,
