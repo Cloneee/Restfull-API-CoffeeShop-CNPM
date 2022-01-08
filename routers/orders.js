@@ -121,7 +121,7 @@ router
 			})
 	});
 
-router.get("/totalsales", async function (req, res) {
+router.post("/totalsales", async function (req, res) {
 	let { startDate, endDate } = req.body
 	const totalSales = await Order.aggregate([
 		{
