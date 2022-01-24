@@ -27,7 +27,7 @@ app.use(morgan("tiny"));
 process.env.NODE_ENV !== "test"? app.use(authJwt()) : null
 app.use(errorHandle);
 
-mongoose.connect("mongodb+srv://user:user@learningmongo1.89tk5.gcp.mongodb.net/coffeeShopDB?retryWrites=true")
+mongoose.connect(process.env.DB_URI)
 // Routers
 
 app.use(`${api}/products`, productsRouter);
