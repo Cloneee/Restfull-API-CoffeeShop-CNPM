@@ -149,6 +149,7 @@ router.post("/login", function (req, res) {
           }
         );
         return res.status(200).json({
+          name: foundCustomer.name,
           email_customer: foundCustomer.email,
           token: token,
         });
