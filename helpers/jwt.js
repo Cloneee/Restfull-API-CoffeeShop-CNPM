@@ -22,10 +22,7 @@ function authJwt() {
 
 async function isRevoked(req, payload, done) {
 	req.locals = {payload: payload}
-	if (payload.isEmployee) {
-		done();
-	}
-	done(null, true);
+	done()
 }
 
 module.exports = authJwt;
